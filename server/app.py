@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 from sqlalchemy import create_engine
+from uri import uri
 
 DEBUG = True
 
@@ -9,7 +10,8 @@ app.config.from_object(__name__)
 
 CORS(app, resources={r'/*': {'origins': '*'}})
 
-engine = create_engine(mysql: // scrambler: Cp2g9lu!!xmV@den1.mysql6.gear.host: 3306/scrambler)
+
+engine = create_engine(uri)
 
 
 @app.route('/ping', methods=['GET'])
