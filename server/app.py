@@ -14,8 +14,8 @@ CORS(app, resources={r'/*': {'origins': '*'}})
 engine = create_engine(uri)
 
 
-@app.route('/ping', methods=['GET'])
-def ping_pong():
+@app.route('/sentences', methods=['GET'])
+def sentences():
     return jsonify('pong!')
 
 
